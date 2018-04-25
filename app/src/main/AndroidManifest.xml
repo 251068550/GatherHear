@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nicmic.gatherhear">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 读写SD卡权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 使用音场效果必要的权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 电话监听权限 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name="com.nicmic.gatherhear.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon, android:theme">
+        <activity
+            android:name="com.nicmic.gatherhear.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nicmic.gatherhear.fragment.ContainerActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="com.nicmic.gatherhear.PLAY"/>
+                <data android:scheme="play"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nicmic.gatherhear.activity.ScanMusicActivity"
+            android:label="@string/title_activity_scan_music"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name="com.nicmic.gatherhear.service.MusicService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name="com.nicmic.gatherhear.activity.SearchLocalMusicActivity"
+            android:label="@string/title_activity_search_local_music"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nicmic.gatherhear.activity.EqualizerActivity"
+            android:label="@string/title_activity_equalizer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nicmic.gatherhear.activity.SoundEffectActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver
+            android:name="com.nicmic.gatherhear.receiver.MusicReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name="com.nicmic.gatherhear.activity.BaseActivity" />
+        <activity
+            android:name="com.nicmic.gatherhear.activity.SettingsActivity"
+            android:label="@string/title_activity_seetings"
+            android:parentActivityName="com.nicmic.gatherhear.activity.BaseActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nicmic.gatherhear.activity.BaseActivity" />
+        </activity>
+        <activity
+            android:name="com.nicmic.gatherhear.activity.settings.SetSongStorageActivity"
+            android:label="@string/title_activity_set_song_storage"
+            android:parentActivityName="com.nicmic.gatherhear.activity.BaseActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nicmic.gatherhear.activity.BaseActivity" />
+        </activity>
+        <activity
+            android:name="com.nicmic.gatherhear.activity.settings.SetCustomAnimActivity"
+            android:label="@string/title_activity_set_custom_anim"
+            android:parentActivityName="com.nicmic.gatherhear.activity.BaseActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nicmic.gatherhear.activity.BaseActivity" />
+        </activity>
+
+        <receiver
+            android:name="com.nicmic.gatherhear.receiver.PhoneBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.nicmic.gatherhear.activity.settings.SetLrcStorageActivity"
+            android:label="@string/title_activity_set_lrc_storage"
+            android:parentActivityName="com.nicmic.gatherhear.activity.BaseActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nicmic.gatherhear.activity.BaseActivity" />
+        </activity>
+        <activity android:name="com.nicmic.gatherhear.activity.SelectMusicActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.nicmic.gatherhear.SELECT"/>
+                <data android:scheme="select"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.AboutActivity"
+            android:label="@string/title_activity_seetings"
+            android:parentActivityName="com.nicmic.gatherhear.activity.BaseActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nicmic.gatherhear.activity.BaseActivity" />
+        </activity>
+    </application>
+
+</manifest>

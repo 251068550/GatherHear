@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:mrl_rippleColor="@color/custom_color">
+
+    <LinearLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/item_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="56dp"
+            android:layout_height="56dp">
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/iv_profile"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/default_cd_cover" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="我可能不会爱你"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/tv_path"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="我可能不会爱你"
+                android:textSize="@dimen/text_size_micro" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="3首"/>
+
+    </LinearLayout>
+
+</com.balysv.materialripple.MaterialRippleLayout>

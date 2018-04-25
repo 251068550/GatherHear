@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.codetail.widget.RevealFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/ll_seekbar_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/custom_color"
+            android:orientation="vertical">
+
+            <!--seekbar相关-->
+            <LinearLayout
+                android:id="@+id/ll_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_music_seekbar_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:paddingLeft="20dp"
+                    android:text="00:00"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/text_size_micro"
+                    android:visibility="invisible" />
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="100"
+                    android:progressDrawable="@drawable/player_setting_bright_progressbar"
+                    android:thumb="@drawable/player_settings_bright_thumb"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/tv_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingRight="20dp"
+                    android:text="00:00"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/text_size_micro"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <!--底部按钮集合-->
+            <LinearLayout
+                android:id="@+id/ll_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_music_buttons_height"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+
+                    <ImageButton
+                        android:id="@+id/btn_order"
+                        android:layout_width="@dimen/activity_music_small_icon"
+                        android:layout_height="@dimen/activity_music_small_icon"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/btn_repeat_white"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/btn_last"
+                        android:layout_width="@dimen/activity_music_medium_icon"
+                        android:layout_height="@dimen/activity_music_medium_icon"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/btn_skip_previous_white"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/btn_play"
+                        android:layout_width="@dimen/activity_music_x_large_icon"
+                        android:layout_height="@dimen/activity_music_x_large_icon"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/btn_play_circle_white"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/btn_next"
+                        android:layout_width="@dimen/activity_music_medium_icon"
+                        android:layout_height="@dimen/activity_music_medium_icon"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/btn_skip_next_white"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/btn_list"
+                        android:layout_width="@dimen/activity_music_small_icon"
+                        android:layout_height="@dimen/activity_music_small_icon"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/btn_queue_music_white"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ll_seekbar_buttons"
+            android:background="@drawable/lollipop2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.nicmic.gatherhear.widget.CDView
+                    android:id="@+id/cd_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ll_seekbar_buttons"
+            android:background="@drawable/bg_gradient_bottom"></FrameLayout>
+
+        <!--标题栏相关-->
+        <LinearLayout
+            android:id="@+id/ll_navbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.romainpiel.shimmer.ShimmerTextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="@string/default_music_title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_x_small" />
+
+                <TextView
+                    android:id="@+id/tv_artist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_title"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:singleLine="true"
+                    android:text="@string/default_music_artist"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_small" />
+
+                <ImageButton
+                    android:id="@+id/btn_menu"
+                    android:layout_width="@dimen/icon_size_x_small"
+                    android:layout_height="@dimen/icon_size_x_small"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="13dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_more_vert_white" />
+
+                <ImageButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="@dimen/icon_size_medium"
+                    android:layout_height="@dimen/icon_size_medium"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/btn_arrow_back_white" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <!--中间fragment-->
+        <FrameLayout
+            android:id="@+id/fragment_music_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ll_seekbar_buttons"
+            android:layout_below="@id/ll_navbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.nicmic.gatherhear.lrc.LrcView
+                    android:id="@+id/lrc_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:id="@+id/mini_lrc_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_lrc_up"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:padding="5dp"
+                        android:text="@string/default_music_title"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_lrc_down"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:text="@string/default_music_artist"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="@dimen/icon_size_small"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/btn_lrc_search"
+                        android:layout_width="@dimen/icon_size_small"
+                        android:layout_height="@dimen/icon_size_small"
+                        android:src="@drawable/ic_search_white"
+                        android:visibility="gone" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/btn_lrc_font"
+                        android:layout_width="@dimen/icon_size_small"
+                        android:layout_height="@dimen/icon_size_small"
+                        android:src="@drawable/ic_lrc_font"
+                        android:visibility="gone" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/btn_lrc_decrease_half_minute"
+                        android:layout_width="@dimen/icon_size_small"
+                        android:layout_height="@dimen/icon_size_small"
+                        android:src="@drawable/ic_decrease_half_minute_white"
+                        android:visibility="gone" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/btn_lrc_increase_half_minute"
+                        android:layout_width="@dimen/icon_size_small"
+                        android:layout_height="@dimen/icon_size_small"
+                        android:src="@drawable/ic_increase_half_minute_white"
+                        android:visibility="gone" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/btn_lrc_mode"
+                        android:layout_width="@dimen/icon_size_small"
+                        android:layout_height="@dimen/icon_size_small"
+                        android:src="@drawable/ic_fullscreen_white"
+                        android:visibility="gone" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/btn_lrc_menu"
+                        android:layout_width="@dimen/icon_size_small"
+                        android:layout_height="@dimen/icon_size_small"
+                        android:src="@drawable/ic_settings_white" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <!--fab列表相关begin-->
+        <com.nicmic.gatherhear.widget.Fab
+            android:id="@+id/fab"
+            style="@style/Widget.MaterialSheetFab.Fab"
+            android:layout_width="@dimen/activity_music_small_icon"
+            android:layout_height="@dimen/activity_music_small_icon"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:visibility="invisible"
+            app:elevation="0dp" />
+        <!-- Overlay that dims the screen -->
+        <com.gordonwong.materialsheetfab.DimOverlayFrameLayout
+            android:id="@+id/overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- Circular reveal container for the sheet -->
+        <io.codetail.widget.RevealLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical">
+
+            <!-- Sheet that contains your items -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fab_sheet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_music_large_icon"
+                android:layout_marginRight="@dimen/activity_music_large_icon">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/include_playlist_header" />
+
+                    <ListView
+                        android:id="@+id/playList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </ListView>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+        </io.codetail.widget.RevealLinearLayout>
+        <!--fab列表相关end-->
+
+
+    </RelativeLayout>
+
+</io.codetail.widget.RevealFrameLayout>

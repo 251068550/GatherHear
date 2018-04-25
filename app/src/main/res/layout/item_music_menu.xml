@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:padding="10dp">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/music_menu_cover"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/lollipop2" />
+
+            <TextView
+                android:id="@+id/music_menu_title"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="5dp"
+                android:text="心灵独奏"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_large" />
+
+            <TextView
+                android:id="@+id/music_menu_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/music_menu_title"
+                android:gravity="center_horizontal|top"
+                android:text="撒大苏打撒旦撒打算dad"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/white" />
+
+
+            <!--卡片按钮集合-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/black_transparent">
+
+                <ImageView
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/music_menu_delete"
+                    android:layout_width="@dimen/icon_size_small"
+                    android:layout_height="@dimen/icon_size_small"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/btn_delete_white" />
+
+                <ImageView
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/music_menu_add"
+                    android:layout_toLeftOf="@id/music_menu_delete"
+                    android:layout_width="@dimen/icon_size_small"
+                    android:layout_height="@dimen/icon_size_small"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/btn_playlist_add_white" />
+
+                <ImageView
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/music_menu_edit"
+                    android:layout_toLeftOf="@id/music_menu_add"
+                    android:layout_width="@dimen/icon_size_small"
+                    android:layout_height="@dimen/icon_size_small"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/btn_edit_white" />
+
+                <TextView
+                    android:id="@+id/music_menu_num"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="12首"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/white"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

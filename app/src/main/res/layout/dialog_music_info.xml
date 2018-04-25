@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/lollipop2"
+            app:siShape="@drawable/dialog_music_cover" />
+
+        <ImageView
+            android:id="@+id/btn_edit"
+            android:layout_margin="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/icon_size_small"
+            android:layout_height="@dimen/icon_size_small"
+            android:src="@drawable/btn_edit_white"/>
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/iv_profile"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/default_cd_cover"
+            app:siBorderWidth="2dp"
+            app:siBorderColor="@color/white"/>
+
+        <TextView
+            android:textSize="@dimen/text_size_small"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:id="@+id/tv_artist"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="歌手：陈楚生"
+            android:gravity="center" />
+
+
+        <TextView
+            android:textSize="@dimen/text_size_small"
+            android:singleLine="true"
+            android:layout_below="@id/tv_artist"
+            android:id="@+id/tv_album"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="专辑：我可能不会爱你"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:textSize="@dimen/text_size_small"
+            android:id="@+id/tv_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_album"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="时长：04:19"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:textSize="@dimen/text_size_small"
+            android:id="@+id/tv_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_duration"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="大小：3.56MB"
+            android:textColor="@color/white" />
+
+        <View
+            android:layout_below="@id/tv_size"
+            android:id="@+id/div1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color" />
+
+        <TextView
+            android:textSize="@dimen/text_size_small"
+            android:lines="2"
+            android:textColor="@color/white"
+            android:layout_below="@id/div1"
+            android:id="@+id/tv_path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="路径：dassafasfasfsafasfasf/fsafasfas/fas/fsa/fas/fas/fas" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="那个远方"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_large" />
+
+
+</LinearLayout>

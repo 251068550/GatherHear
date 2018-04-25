@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ripple="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--顶部布局-->
+    <RelativeLayout
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_navbar_height">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/custom_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="@dimen/settings_item_margin_left"
+                android:text="设置"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_x_large" />
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="@dimen/icon_size_medium"
+                android:layout_height="@dimen/icon_size_medium"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_arrow_back_white" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/settings_navbar_height"
+            android:background="#88CECECE" />
+
+    </RelativeLayout>
+
+
+    <!--底部布局-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="30dp" />
+
+            <!--歌曲设置-->
+            <LinearLayout
+                android:id="@+id/settings_song"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/settings_item_title_height">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="38dp">
+
+                        <com.andexert.library.RippleView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            ripple:rv_type="doubleRipple">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/icon_size_medium"
+                                android:layout_height="@dimen/icon_size_medium"
+                                android:src="@color/custom_color" />
+
+                        </com.andexert.library.RippleView>
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size_small"
+                            android:layout_height="@dimen/icon_size_small"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_queue_music_white" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:textSize="@dimen/text_size_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/settings_item_margin_left"
+                        android:text="歌曲"
+                        android:textColor="@color/custom_color" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/settings_item_margin_left"
+                        android:background="@color/custom_color" />
+                </RelativeLayout>
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/settings_item_height"
+                    app:mrl_rippleColor="@color/custom_color">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/btn_song_storage_location"
+                        android:paddingLeft="@dimen/settings_item_margin_left"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:textSize="@dimen/text_size_small"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="歌曲存放目录"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv_song_storage_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textSize="@dimen/text_size_micro" />
+
+                    </LinearLayout>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:mrl_rippleColor="@color/custom_color">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/settings_item_height"
+                        android:id="@+id/btn_soon_to_play"
+                        android:paddingLeft="@dimen/settings_item_margin_left">
+
+                        <TextView
+                            android:textSize="@dimen/text_size_small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="即将播放歌曲的通知"
+                            android:textColor="@color/black" />
+
+                        <com.rey.material.widget.Switch
+                            android:id="@+id/switch_soon_to_play"
+                            style="@style/Material.Widget.Switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:checked="false"
+                            android:gravity="center" />
+
+                    </RelativeLayout>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </LinearLayout>
+            <!--歌词设置-->
+            <LinearLayout
+                android:id="@+id/settings_lrc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/settings_item_title_height">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="38dp">
+
+                        <com.andexert.library.RippleView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            ripple:rv_type="doubleRipple">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/icon_size_medium"
+                                android:layout_height="@dimen/icon_size_medium"
+                                android:src="@color/custom_color" />
+
+                        </com.andexert.library.RippleView>
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size_small"
+                            android:layout_height="@dimen/icon_size_small"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_lrc_white" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:textSize="@dimen/text_size_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/settings_item_margin_left"
+                        android:text="歌词"
+                        android:textColor="@color/custom_color" />
+
+                    <com.rey.material.widget.Switch
+                        android:visibility="gone"
+                        style="@style/Material.Widget.Switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:checked="false"
+                        android:gravity="center" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/settings_item_margin_left"
+                        android:background="@color/custom_color" />
+                </RelativeLayout>
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/settings_item_height"
+                    app:mrl_rippleColor="@color/custom_color">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/btn_lrc_storage_location"
+                        android:paddingLeft="@dimen/settings_item_margin_left"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:textSize="@dimen/text_size_small"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="歌词存放目录"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv_lrc_storage_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textSize="@dimen/text_size_micro" />
+
+                    </LinearLayout>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </LinearLayout>
+            <!--动画设置-->
+            <LinearLayout
+                android:id="@+id/settings_anim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/settings_item_title_height">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="38dp">
+
+                        <com.andexert.library.RippleView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            ripple:rv_type="doubleRipple">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/icon_size_medium"
+                                android:layout_height="@dimen/icon_size_medium"
+                                android:src="@color/custom_color" />
+
+                        </com.andexert.library.RippleView>
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size_small"
+                            android:layout_height="@dimen/icon_size_small"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_anim_white" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:textSize="@dimen/text_size_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/settings_item_margin_left"
+                        android:text="动画"
+                        android:textColor="@color/custom_color" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/settings_item_margin_left"
+                        android:background="@color/custom_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/settings_item_margin_left">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/settings_item_height"
+                            android:orientation="horizontal">
+
+                            <com.rey.material.widget.RadioButton
+                                android:id="@+id/btn_low_grade"
+                                style="@style/Material.Drawable.RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:checked="true"
+                                android:textSize="@dimen/text_size_small"
+                                android:gravity="center_vertical"
+                                android:text="低档" />
+
+                            <com.rey.material.widget.RadioButton
+                                android:id="@+id/btn_middle_grade"
+                                style="@style/Material.Drawable.RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:textSize="@dimen/text_size_small"
+                                android:gravity="center_vertical"
+                                android:text="中档" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/settings_item_height"
+                            android:orientation="horizontal">
+
+                            <com.rey.material.widget.RadioButton
+                                android:id="@+id/btn_high_grade"
+                                style="@style/Material.Drawable.RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:textSize="@dimen/text_size_small"
+                                android:gravity="center_vertical"
+                                android:text="高档" />
+
+                            <com.rey.material.widget.RadioButton
+                                android:id="@+id/btn_custom_grade"
+                                style="@style/Material.Drawable.RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:textSize="@dimen/text_size_small"
+                                android:gravity="center_vertical"
+                                android:text="自定义" />
+
+                        </LinearLayout>
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:mrl_rippleColor="@color/custom_color">
+
+                <RelativeLayout
+                    android:id="@+id/btn_custom_grade_settings"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/settings_item_height"
+                    android:paddingLeft="@dimen/settings_item_margin_left">
+
+                    <TextView
+                        android:textSize="@dimen/text_size_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="自定义设置"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </LinearLayout>
+            <!--关于-->
+            <LinearLayout
+                android:id="@+id/settings_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/settings_item_title_height">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="38dp">
+
+                        <com.andexert.library.RippleView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            ripple:rv_type="doubleRipple">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/icon_size_medium"
+                                android:layout_height="@dimen/icon_size_medium"
+                                android:src="@color/custom_color" />
+
+                        </com.andexert.library.RippleView>
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size_micro"
+                            android:layout_height="@dimen/icon_size_micro"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_about_white" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:textSize="@dimen/text_size_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="@dimen/settings_item_margin_left"
+                        android:text="关于"
+                        android:textColor="@color/custom_color" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/settings_item_margin_left"
+                        android:background="@color/custom_color" />
+                </RelativeLayout>
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:mrl_rippleColor="@color/custom_color">
+
+                <RelativeLayout
+                    android:id="@+id/btn_contact_me"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/settings_item_height"
+                    android:layout_marginLeft="@dimen/settings_item_margin_left">
+
+                    <TextView
+                        android:textSize="@dimen/text_size_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="联系我"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:mrl_rippleColor="@color/custom_color">
+
+                <RelativeLayout
+                    android:id="@+id/btn_check_upgrade"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/settings_item_height"
+                    android:layout_marginLeft="@dimen/settings_item_margin_left">
+
+                    <TextView
+                        android:textSize="@dimen/text_size_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="检查更新"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:mrl_rippleColor="@color/custom_color">
+
+                <RelativeLayout
+                    android:id="@+id/btn_feedback"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/settings_item_height"
+                    android:layout_marginLeft="@dimen/settings_item_margin_left">
+
+                    <TextView
+                        android:textSize="@dimen/text_size_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="反馈"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--位于顶部和底部滑动之间的圆形图标-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="98dp">
+
+        <com.andexert.library.RippleView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ripple:rv_type="doubleRipple">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/icon_size_large"
+                android:layout_height="@dimen/icon_size_large"
+                android:src="@color/custom_color" />
+
+        </com.andexert.library.RippleView>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/icon_size_medium"
+            android:layout_height="@dimen/icon_size_medium"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_settings_white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

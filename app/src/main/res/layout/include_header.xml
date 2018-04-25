@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/navbar_height"
+    android:background="@color/custom_color">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/icon_size_medium"
+        android:layout_height="@dimen/icon_size_medium"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/btn_arrow_back_white" />
+
+    <ImageButton
+        android:id="@+id/btn_menu"
+        android:layout_width="@dimen/icon_size_x_small"
+        android:layout_height="@dimen/icon_size_x_small"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/btn_more_vert_white" />
+
+    <TextView
+        android:id="@+id/tv_navbar_title"
+        android:layout_toLeftOf="@id/btn_menu"
+        android:layout_toRightOf="@id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="自定义标题"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_medium" />
+
+</RelativeLayout>

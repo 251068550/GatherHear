@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nicmic.gatherhear.activity.SelectMusicActivity">
+
+    <RelativeLayout
+        android:background="@color/custom_color"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navbar_height">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/icon_size_medium"
+            android:layout_height="@dimen/icon_size_medium"
+            android:src="@drawable/btn_arrow_back_white" />
+
+        <RelativeLayout
+            android:layout_toRightOf="@id/btn_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/et_content"
+                android:textSize="@dimen/text_size_micro"
+                android:hint="查找"
+                android:textColor="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_corner_white_outline"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/listview"/>
+
+</LinearLayout>

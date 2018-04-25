@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_queue_music_white"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_title_and_num"
+        android:layout_weight="5"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_small"
+        android:text="播放列表"
+        android:textColor="@color/white"/>
+
+    <RelativeLayout
+        android:id="@+id/clear_all"
+        android:layout_gravity="right"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/btn_delete_white"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

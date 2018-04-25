@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.nicmic.gatherhear.activity.EqualizerActivity">
+
+    <include layout="@layout/include_header"/>
+
+    <TextView
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="均衡器"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_small"
+        android:background="@color/custom_color"/>
+
+    <LinearLayout
+        android:background="@color/custom_color"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/band_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="+15db"
+                android:textSize="@dimen/text_size_micro" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="0db"
+                android:textSize="@dimen/text_size_micro" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/band_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
+                android:text="-15db"
+                android:textSize="@dimen/text_size_micro" />
+
+        </RelativeLayout>
+
+        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+            android:id="@+id/seekBarContainer1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                android:id="@+id/seekBar1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:progressDrawable="@drawable/player_setting_bright_progressbar"
+                android:thumb="@drawable/player_settings_bright_thumb"
+                app:seekBarRotation="CW270" />
+        </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+            android:id="@+id/seekBarContainer2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                android:id="@+id/seekBar2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:progressDrawable="@drawable/player_setting_bright_progressbar"
+                android:thumb="@drawable/player_settings_bright_thumb"
+                app:seekBarRotation="CW270" />
+        </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+            android:id="@+id/seekBarContainer3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                android:id="@+id/seekBar3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:progressDrawable="@drawable/player_setting_bright_progressbar"
+                android:thumb="@drawable/player_settings_bright_thumb"
+                app:seekBarRotation="CW270" />
+        </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+            android:id="@+id/seekBarContainer4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                android:id="@+id/seekBar4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:progressDrawable="@drawable/player_setting_bright_progressbar"
+                android:thumb="@drawable/player_settings_bright_thumb"
+                app:seekBarRotation="CW270" />
+        </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+            android:id="@+id/seekBarContainer5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                android:id="@+id/seekBar5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:progressDrawable="@drawable/player_setting_bright_progressbar"
+                android:thumb="@drawable/player_settings_bright_thumb"
+                app:seekBarRotation="CW270" />
+        </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/custom_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_micro" />
+
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/freq1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="60"
+            android:textSize="@dimen/text_size_micro" />
+
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/freq2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="230"
+            android:textSize="@dimen/text_size_micro" />
+
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/freq3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="910"
+            android:textSize="@dimen/text_size_micro" />
+
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/freq4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="3600"
+            android:textSize="@dimen/text_size_micro" />
+
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/freq5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="14000"
+            android:textSize="@dimen/text_size_micro" />
+
+    </LinearLayout>
+
+    <TextView
+        android:textSize="@dimen/text_size_small"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="重低音" />
+
+    <SeekBar
+        android:id="@+id/seekbar_bass_boost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="@dimen/text_size_micro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="低音"/>
+
+        <TextView
+            android:textSize="@dimen/text_size_micro"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:text="高音"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:textSize="@dimen/text_size_small"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="环绕音" />
+
+    <SeekBar
+        android:id="@+id/seekbar_virtualizer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="@dimen/text_size_micro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="减弱"/>
+
+        <TextView
+            android:textSize="@dimen/text_size_micro"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:text="增强"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,444 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nicmic.gatherhear.fragment.MainFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--top_view被这个阴影包围-->
+        <!--<app.mosn.zdepthshadowlayout.ZDepthShadowLayout-->
+        <!--android:id="@+id/top_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--shadow:z_depth="z_depth2"-->
+        <!--shadow:z_depth_shape="rect"-->
+        <!--shadow:z_depth_paddingTop="z_depth0"-->
+        <!--shadow:z_depth_paddingLeft="z_depth0"-->
+        <!--shadow:z_depth_paddingRight="z_depth0">-->
+
+
+        <RelativeLayout
+            android:id="@+id/top_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/lollipop2"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/btn_menu_main"
+                android:layout_width="@dimen/fragment_main_medium_icon"
+                android:layout_height="@dimen/fragment_main_medium_icon"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_menu_white" />
+
+            <TextView
+                android:id="@+id/tv_logo_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Gather Hear"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_max_large" />
+
+        </RelativeLayout>
+
+        <!--</app.mosn.zdepthshadowlayout.ZDepthShadowLayout>-->
+
+        <!--底部可滑动视图-->
+        <ScrollView
+            android:id="@+id/bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top_view">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--歌名-->
+                <TextView
+                    android:id="@+id/tv_title_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="@string/default_music_title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <!--歌手-->
+                <TextView
+                    android:id="@+id/tv_artist_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_title_main"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="@string/default_music_artist"
+                    android:textSize="@dimen/text_size_small" />
+
+                <!--歌词-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/lrc_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_artist_main"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_corner_white"
+                    app:cardCornerRadius="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_lrc_last"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/default_music_title"
+                            android:textColor="@color/custom_color"
+                            android:textSize="@dimen/text_size_small" />
+
+                        <TextView
+                            android:id="@+id/tv_lrc_next"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:padding="5dp"
+                            android:text="@string/default_music_artist"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_small" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--底部容器-->
+                <LinearLayout
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fragment_main_bottom_container_height"
+                    android:layout_below="@id/lrc_card"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.CardView
+                        android:background="@drawable/bg_corner_white"
+                        android:id="@+id/local_music_card"
+                        app:cardCornerRadius="5dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/lollipop2" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="本地音乐"
+                                        android:textColor="@color/black" />
+
+                                    <TextView
+                                        android:id="@+id/tv_local_music_num"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="5dp"
+                                        android:text="0首"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/my_music_menu_card"
+                        app:cardCornerRadius="5dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/lollipop5" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="我的歌单"
+                                        android:textColor="@color/black" />
+
+                                    <TextView
+                                        android:id="@+id/tv_music_menu_num"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="5dp"
+                                        android:text="0张"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/my_like_card"
+                        app:cardCornerRadius="5dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/lollipop6" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="我喜欢的"
+                                        android:textColor="@color/black" />
+
+                                    <TextView
+                                        android:id="@+id/tv_my_like_num"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="5dp"
+                                        android:text="0首"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/recent_play_card"
+                        app:cardCornerRadius="5dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0.5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="最\n近\n播\n放"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:gravity="center"
+                                android:layout_marginTop="2dp"
+                                android:id="@+id/tv_recent_play_num"
+                                android:textSize="12sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0\n首"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <!--播放按钮-->
+        <com.dd.ShadowLayout
+            android:id="@+id/play_main_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="145dp"
+            app:sl_cornerRadius="@dimen/fragment_main_play_icon_size"
+            app:sl_dx="0dp"
+            app:sl_dy="0dp"
+            app:sl_shadowColor="#AA000000"
+            app:sl_shadowRadius="4dp">
+
+            <RelativeLayout
+                android:layout_width="@dimen/fragment_main_play_icon_size"
+                android:layout_height="@dimen/fragment_main_play_icon_size"
+                android:layout_centerHorizontal="true">
+
+                <com.andexert.library.RippleView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    ripple:rv_type="doubleRipple">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/btn_play_main"
+                        android:layout_width="@dimen/fragment_main_play_icon_size"
+                        android:layout_height="@dimen/fragment_main_play_icon_size"
+                        android:src="@drawable/default_cd_cover"
+                        tools:ignore="ContentDescription" />
+
+                </com.andexert.library.RippleView>
+
+                <ImageView
+                    android:id="@+id/icon_play_main"
+                    android:layout_width="@dimen/icon_size_medium"
+                    android:layout_height="@dimen/icon_size_medium"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/btn_play_arrow_white" />
+
+            </RelativeLayout>
+        </com.dd.ShadowLayout>
+
+        <!--上一首按钮-->
+        <com.dd.ShadowLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="170dp"
+            android:layout_toLeftOf="@id/play_main_view"
+            app:sl_cornerRadius="@dimen/icon_size_large"
+            app:sl_dx="0dp"
+            app:sl_dy="0dp"
+            app:sl_shadowColor="#AA000000"
+            app:sl_shadowRadius="4dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.andexert.library.RippleView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    ripple:rv_type="doubleRipple">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/btn_last_main"
+                        android:layout_width="@dimen/icon_size_large"
+                        android:layout_height="@dimen/icon_size_large"
+                        android:src="@color/custom_color" />
+
+                </com.andexert.library.RippleView>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/icon_size_medium"
+                    android:layout_height="@dimen/icon_size_medium"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/btn_skip_previous_white" />
+            </RelativeLayout>
+        </com.dd.ShadowLayout>
+
+        <!--下一首按钮-->
+        <com.dd.ShadowLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="170dp"
+            android:layout_toRightOf="@id/play_main_view"
+            app:sl_cornerRadius="@dimen/icon_size_large"
+            app:sl_dx="0dp"
+            app:sl_dy="0dp"
+            app:sl_shadowColor="#AA000000"
+            app:sl_shadowRadius="4dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.andexert.library.RippleView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    ripple:rv_type="doubleRipple">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/btn_next_main"
+                        android:layout_width="@dimen/icon_size_large"
+                        android:layout_height="@dimen/icon_size_large"
+                        android:src="@color/custom_color" />
+
+                </com.andexert.library.RippleView>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/icon_size_medium"
+                    android:layout_height="@dimen/icon_size_medium"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/btn_skip_next_white" />
+            </RelativeLayout>
+        </com.dd.ShadowLayout>
+    </RelativeLayout>
+
+</FrameLayout>

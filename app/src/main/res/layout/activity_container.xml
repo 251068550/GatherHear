@@ -1,0 +1,33 @@
+<!--包括最外层fragment和底部小音乐部件-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--底部音乐小部件-->
+    <include
+        android:id="@+id/bottom_music"
+        layout="@layout/include_bottom_music" />
+
+    <!--最外层fragment（包含音乐fragment和主界面fragment）-->
+    <io.codetail.widget.RevealFrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_music">
+
+        <!--主界面fragment-->
+        <RelativeLayout
+            android:id="@+id/fragment_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--音乐fragment-->
+        <RelativeLayout
+            android:id="@+id/fragment_music"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible" />
+
+    </io.codetail.widget.RevealFrameLayout>
+
+</RelativeLayout>

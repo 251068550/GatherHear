@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="custom_color">#01579b</color>
+    <!--<color name="custom_color">#a4c8d9</color>-->
+    <!--<color name="custom_color">#de6e88</color>-->
+    <color name="white">#ffffff</color>
+    <color name="gray">#cccccc</color>
+    <color name="black">#000000</color>
+    <color name="green">#1BC72C</color>
+    <color name="red">#ff0000</color>
+
+    <color name="black_transparent">#44000000</color>
+    <color name="pink_transparent">#7dd71fc4</color>
+    <color name="white_transparent">#7fffffff</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="divider_color">#CECBCB</color>
+
+    <!--马卡龙颜色-->
+    <color name="pink_dark">#f55066</color>
+    <color name="pink_light">#f1b8e4</color>
+    <color name="green_dark">#b7d28d</color>
+    <color name="green_light">#b8f1cc</color>
+    <color name="orange_dark">#ff9b6a</color>
+    <color name="orange_light">#f1ccb8</color>
+    <color name="yellow_dark">#f3d64e</color>
+    <color name="yellow_light">#f1f1b8</color>
+    <color name="purple_dark">#c38e9e</color>
+    <color name="purple_light">#d9b8f1</color>
+    <color name="blue_dark">#01579b</color>
+    <color name="blue_light">#b8f1ed</color>
+    <color name="grey_dark">#cccbca</color>
+    <color name="grey_light">#e7dac9</color>
+    <color name="red_dark">#ec2c2c</color>
+    <color name="red_light">#fd6251</color>
+    <!--歌曲菜单的颜色-->
+    <color name="menu_color1">#edbf2b</color>
+    <color name="menu_color2">#c38e9e</color>
+    <color name="menu_color3">#b7d28d</color>
+    <color name="menu_color4">#f16d7a</color>
+
+</resources>

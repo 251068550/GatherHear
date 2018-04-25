@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bottom_music_height"
+    android:layout_alignParentBottom="true"
+    android:layout_weight="1"
+    android:orientation="horizontal">
+
+    <!--背面部件-->
+    <RelativeLayout
+        android:id="@+id/bottom_music_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/custom_color"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_music_back_button_height"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bg_corner_white_outline"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small" />
+
+    </RelativeLayout>
+
+    <!--正面部件-->
+    <co.mobiwise.library.ProgressLayout
+        android:id="@+id/bottom_music_front"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:autoProgress="true"
+        app:emptyColor="@color/custom_color"
+        app:loadedColor="@color/black_transparent"
+        app:maxProgress="100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/bottom_music_profile"
+                android:layout_width="@dimen/bottom_music_circle_image_size"
+                android:layout_height="@dimen/bottom_music_circle_image_size"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/default_cd_cover"
+                app:siBorderColor="@color/white"
+                app:siBorderWidth="2dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/bottom_music_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/default_music_title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_small" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bottom_music_artist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:text="@string/default_music_artist"
+                        android:textSize="@dimen/text_size_micro" />
+
+                    <TextView
+                        android:id="@+id/bottom_music_progress_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="00:00/00:00"
+                        android:textSize="@dimen/text_size_micro" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/bottom_music_play"
+                android:layout_width="@dimen/bottom_music_play_size"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/bottom_music_play_icon"
+                    android:layout_width="@dimen/bottom_music_icon_size"
+                    android:layout_height="@dimen/bottom_music_icon_size"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/btn_play_circle_white" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bottom_music_playlist"
+                android:layout_width="@dimen/bottom_music_queue_music_size"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="@dimen/bottom_music_icon_size"
+                    android:layout_height="@dimen/bottom_music_icon_size"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/btn_queue_music_white" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </co.mobiwise.library.ProgressLayout>
+
+</RelativeLayout>

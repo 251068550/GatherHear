@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.nicmic.gatherhear.activity.settings.SetSongStorageActivity">
+
+    <include layout="@layout/include_header"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/inner_sd_card"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/icon_size_x_large"
+            android:layout_height="@dimen/icon_size_x_large"
+            android:src="@drawable/ic_sd_card_black"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/icon_size_x_large"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="内置SD卡"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:textSize="@dimen/text_size_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="总容量："
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:textSize="@dimen/text_size_small"
+                    android:id="@+id/tv_inner_total_size"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:textSize="@dimen/text_size_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="剩余空间："
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:textSize="@dimen/text_size_small"
+                    android:id="@+id/tv_inner_available_size"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.rey.material.widget.CheckBox
+            android:id="@+id/checkbox_inner"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ext_sd_card"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/icon_size_x_large"
+            android:layout_height="@dimen/icon_size_x_large"
+            android:src="@drawable/ic_sd_card_black"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/icon_size_x_large"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="外置SD卡"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:textSize="@dimen/text_size_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="总容量："
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:textSize="@dimen/text_size_small"
+                    android:id="@+id/tv_ext_total_size"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:textSize="@dimen/text_size_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="剩余空间："
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:textSize="@dimen/text_size_small"
+                    android:id="@+id/tv_ext_available_size"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.rey.material.widget.CheckBox
+            android:id="@+id/checkbox_ext"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

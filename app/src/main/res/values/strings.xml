@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">聚听</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_play">PlayActivity</string>
+
+    <!--drawer相关-->
+    <string name="drawer_item_settings">设置</string>
+    <string name="drawer_item_sound">音效</string>
+    <string name="drawer_item_skin">皮肤</string>
+    <string name="drawer_item_scan_music">扫描音乐</string>
+    <string name="drawer_item_exit">退出</string>
+
+    <string name="default_music_title">聆听你的声音</string>
+    <string name="default_music_artist">hear your heart</string>
+
+    <string name="title_activity_scan_music">扫描音乐</string>
+    <string name="title_activity_search_local_music">SearchLocalMusicActivity</string>
+    <string name="title_activity_equalizer">EqualizerActivity</string>
+    <string name="title_activity_seetings">SeetingsActivity</string>
+    <string name="title_activity_set_song_storage">SetSongStorageActivity</string>
+    <string name="title_activity_set_custom_anim">SetCustomAnimActivity</string>
+    <string name="title_activity_set_lrc_storage">SetLrcStorageActivity</string>
+</resources>

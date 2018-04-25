@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.nicmic.gatherhear.activity.settings.SetLrcStorageActivity">
+
+    <include layout="@layout/include_header" />
+
+    <LinearLayout
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="歌词目录:" />
+
+        <TextView
+            android:id="@+id/tv_lrc_filepath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <TextView
+            android:textColor="@color/custom_color"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="        由于目前不支持网络乐库，歌词只能由用户手动下载到歌词目录下，并且歌词名称必须和歌曲名称一致。\n        后续版本将会推出丰富的曲库和词库,敬请期待!"/>
+
+    </LinearLayout>
+
+</LinearLayout>

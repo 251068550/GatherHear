@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:shadow="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nicmic.gatherhear.fragment.LocalMusicFragment">
+
+    <include layout="@layout/include_header"
+        android:id="@+id/navbar"/>
+
+    <!--<app.mosn.zdepthshadowlayout.ZDepthShadowLayout-->
+    <!--android:id="@+id/top_menu"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="48dp"-->
+    <!--shadow:z_depth="z_depth1"-->
+    <!--shadow:z_depth_shape="rect"-->
+    <!--shadow:z_depth_paddingTop="z_depth0"-->
+    <!--shadow:z_depth_paddingLeft="z_depth0"-->
+    <!--shadow:z_depth_paddingRight="z_depth0"-->
+    <!--shadow:z_depth_paddingBottom="z_depth1">-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/navbar"
+        android:id="@+id/nav_menu"
+        android:layout_height="48dp">
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/nav_menu_finish"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_rectangle_custom_color"
+            android:gravity="center"
+            android:text="完成"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/nav_menu_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:textSize="@dimen/text_size_small"
+                android:id="@+id/btn_song"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rectangle_custom_color"
+                android:gravity="center"
+                android:text="单曲"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:textSize="@dimen/text_size_small"
+                android:id="@+id/btn_artist"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_stroke_custom_color"
+                android:gravity="center"
+                android:text="歌手"
+                android:textColor="@color/custom_color" />
+
+            <TextView
+                android:id="@+id/btn_album"
+                android:textSize="@dimen/text_size_small"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_stroke_custom_color"
+                android:gravity="center"
+                android:text="专辑"
+                android:textColor="@color/custom_color" />
+
+            <TextView
+                android:id="@+id/btn_file"
+                android:textSize="@dimen/text_size_small"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_stroke_custom_color"
+                android:gravity="center"
+                android:text="文件夹"
+                android:textColor="@color/custom_color" />
+
+        </LinearLayout>
+    </RelativeLayout>
+    <!--</app.mosn.zdepthshadowlayout.ZDepthShadowLayout>-->
+
+    <com.nhaarman.listviewanimations.itemmanipulation.DynamicListView
+        android:id="@+id/lv_dynamic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav_menu" />
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/lv_song"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav_menu" />
+
+    <ListView
+        android:id="@+id/lv_artist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav_menu"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/lv_album"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav_menu"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/lv_file"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav_menu"
+        android:visibility="gone" />
+
+</RelativeLayout>

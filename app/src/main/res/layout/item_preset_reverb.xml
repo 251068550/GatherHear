@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:simple="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <net.wujingchao.android.view.SimpleTagImageView
+        android:id="@+id/stiv"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        simple:simple_corner_distance="30dp"
+        simple:simple_tag_background_color="@color/custom_color"
+        simple:simple_tag_enable="true"
+        simple:simple_tag_orientation="right_bottom"
+        simple:simple_tag_round_radius="20dp"
+        simple:simple_tag_text=""
+        simple:simple_tag_textColor="@color/white"
+        simple:simple_tag_textSize="@dimen/text_size_micro"
+        simple:simple_tag_width="20dp" />
+
+    <RelativeLayout
+        android:id="@+id/in_use"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp">
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_corner_wide_outline" />
+
+    </RelativeLayout>
+
+</FrameLayout>
