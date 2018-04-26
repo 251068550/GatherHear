@@ -32,10 +32,14 @@ Android 5.0刚出的时候开发的应用，遵循Material Design风格，加入
 [360手机助手](http://zhushou.360.cn/detail/index/soft_id/3407022?recrefer=SE_D_%E8%81%9A%E5%90%AC "360手机助手")
 
 ## 项目截图 ##
-![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_40_01.png?raw=true)
-![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_43_02.png?raw=true)
-![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_45_01.png?raw=true)
+| | | |
+|:---:|:---:|:---:|
+|![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_40_01.png?raw=true)|![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_43_02.png?raw=true)|![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_45_01.png?raw=true)|
+
+
+
 ![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_49_01.png?raw=true)
+
 
 [https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_40_01.png?raw=true](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_40_01.png?raw=true)
 [https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_43_02.png?raw=true](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_43_02.png?raw=true)
