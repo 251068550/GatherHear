@@ -38,11 +38,7 @@ Android 5.0刚出的时候开发的应用，遵循Material Design风格，加入
 
 | | | |
 |:---:|:---:|:---:|
-|![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_49_01.png?raw=true)|![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_40_01.png?raw=true)|![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_43_02.png?raw=true)|
-
-| | | |
-|:---:|:---:|:---:|
-|![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_45_01.png?raw=true)|![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_49_01.png?raw=true)|![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_52_01.png?raw=true)|
+|![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_21_09_02.png?raw=true)|![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_49_01.png?raw=true)|![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_52_01.png?raw=true)|
 
 | | | |
 |:---:|:---:|:---:|
@@ -54,7 +50,7 @@ Android 5.0刚出的时候开发的应用，遵循Material Design风格，加入
 
 | | | |
 |:---:|:---:|:---:|
-|![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_21_07_03.png?raw=true)|![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_21_08_01.png?raw=true)|![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_21_09_02.png?raw=true)|
+|![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_21_07_03.png?raw=true)|![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_21_08_01.png?raw=true)||
 
 ## 聚片 ##
 聚片是个人开发的原生制作H5作品的应用，有兴趣的可以了解一下，一定不会让你失望。因为是在Android 5.0发布的时候开发的，所以现在应该很多手机装上去都无法使用，过段时间会重新上架兼容最新安卓系统。代码暂不开源，使用leancloud做为后台，因为当时leancloud突然开始收费每天最低30，所以很长时间不再更新维护了。
