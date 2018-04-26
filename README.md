@@ -7,7 +7,7 @@ Android 5.0刚出的时候开发的应用，遵循Material Design风格，加入
 
 ## 介绍 ##
 聚听音乐，一款简单的本地音乐播放器。
-[http://sj.qq.com/myapp/detail.htm?apkName=com.nicmic.gatherpieces](http://sj.qq.com/myapp/detail.htm?apkName=com.nicmic.gatherpieces "聚片")贴身打造，为其提供额外的音乐服务。
+[聚片](http://sj.qq.com/myapp/detail.htm?apkName=com.nicmic.gatherpieces "聚片")贴身打造，为其提供额外的音乐服务。
 还原最基本的音乐功能，简化本地音乐播放。
 深入每个细节的动画，让聚听伴随音乐律动。
 聚听，聆听你的声音！
@@ -25,11 +25,18 @@ Android 5.0刚出的时候开发的应用，遵循Material Design风格，加入
 - 支持在歌曲结束时提示下一首播放的歌曲
 
 ## 应用地址 ##
-[http://sj.qq.com/myapp/detail.htm?apkName=com.nicmic.gatherhear](http://sj.qq.com/myapp/detail.htm?apkName=com.nicmic.gatherhear "应用宝")
-[http://www.wandoujia.com/apps/com.nicmic.gatherhear](http://www.wandoujia.com/apps/com.nicmic.gatherhear "豌豆荚")
-[http://zhushou.360.cn/detail/index/soft_id/3407022?recrefer=SE_D_%E8%81%9A%E5%90%AC](http://zhushou.360.cn/detail/index/soft_id/3407022?recrefer=SE_D_%E8%81%9A%E5%90%AC "360手机助手")
+[应用宝](http://sj.qq.com/myapp/detail.htm?apkName=com.nicmic.gatherhear "应用宝")
+
+[豌豆荚](http://www.wandoujia.com/apps/com.nicmic.gatherhear "豌豆荚")
+
+[360手机助手](http://zhushou.360.cn/detail/index/soft_id/3407022?recrefer=SE_D_%E8%81%9A%E5%90%AC "360手机助手")
 
 ## 项目截图 ##
+![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_40_01.png?raw=true)
+![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_43_02.png?raw=true)
+![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_45_01.png?raw=true)
+![](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_49_01.png?raw=true)
+
 [https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_40_01.png?raw=true](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_40_01.png?raw=true)
 [https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_43_02.png?raw=true](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_43_02.png?raw=true)
 [https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_45_01.png?raw=true](https://github.com/251068550/Screenshots/blob/master/GatherHear/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0525_20_45_01.png?raw=true)
